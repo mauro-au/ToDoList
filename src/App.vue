@@ -11,6 +11,7 @@
           <button class="btn btn-primary" @click.prevent="saveToDo">Crear</button>
         </form>
         <section class="todolist__card">
+          <p class="todolist__counter">Quedan {{ itemCounter.length }} Items</p>
           <ul class="my-4">
             <li v-for="(toDo, index) in toDoList" :key="index">
               <div class="card" :class="{ card__taskdone: toDo.done }">
@@ -30,6 +31,7 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
   name: 'App',
@@ -60,11 +62,15 @@ export default {
       this.toDoList = [];
     }
   },
+  computed: {
+    itemCounter: function () {
+      return this.toDoList.filter(checkbox => checkbox.done == false);
+    }
+  },
 }
 </script>
 
 <style land>
-
 @keyframes opacity{
   0% {
     opacity:0;
