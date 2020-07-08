@@ -20,12 +20,12 @@
                     <input type="checkbox" v-model="toDo.done"/>
                     <span class="card__line">{{ toDo.name }}</span>
                   </div>
-                  <span class="btn btn-danger" @click="delateToDo(index)">X</span>
+                  <span class="btn" @click="delateToDo(index)"><img src="/src/assets/cross.svg" class="card__delate-list" alt=""></span>
                 </div>
               </div>
             </li>
           </ul>
-          <button class="btn btn-primary btn-lg btn-block mt-5 card__delate" v-if="show" @click="allDelateToDo">Borrar todo</button>
+          <button class="btn btn-primary btn-lg btn-block mt-5 card__delate" v-if="show" @click="allDelateToDo">Borrar todo<img src="/src/assets/trash.svg" alt=""></button>
         </section>
       </div>
     </div>
@@ -194,6 +194,15 @@ ul{
 .card__delate{
   animation-name: opacity;
   animation-duration: 1.2s;
+}
+.card__delate img{
+    margin: 0px 10px;
+    width: 15px;
+    top: -2px;
+    position: relative;
+}
+.card__delate-list{
+  width: 15px;
 }
 .card__line{
   margin-left: 15px;
