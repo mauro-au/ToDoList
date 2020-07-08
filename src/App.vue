@@ -2,15 +2,18 @@
   <div class="todolist">
     <div class="todolist__main">
       <div class="container">
-        <h2>{{ message }}</h2>
+        <title>
+          <h1>{{ message }}</h1>
+        </title>
         <br />
         <form class="todolist__search">
-            <input type="text" id="input" placeholder="Ingrese una nueva tarea" v-model="task" @keyup.enter.prevent="saveToDo"/>
-            <button class="btn btn-primary" @click.prevent="saveToDo">Crear</button>
+          <input type="text" id="input" placeholder="Ingrese una nueva tarea" v-model="task" @keyup.enter.prevent="saveToDo"/>
+          <button class="btn btn-primary" @click.prevent="saveToDo">Crear</button>
         </form>
         <ul class="container">
             <li v-for="(tarea, index) in toDoList" :key="index">
-                <input type="checkbox">{{index}}:{{tarea.name}}
+              <input type="checkbox">{{index}}:{{tarea.name}}
+              <span class="btn btn-danger" @click="delateToDo(index)">X</span>
             </li>
         </ul>
       </div>
@@ -27,15 +30,18 @@ export default {
     };
   },
   methods: {
-    mostrarNombre: function() {
-      this.mostrar = !this.mostrar;
-    },
     saveToDo() {
       if (this.task !== "") {
         this.toDoList.push({ name: this.task, done: false });
         this.show = true
       }
       this.task = "";
+    },
+    delateToDo(index) {
+      if (this.toDoList.length == 1) {
+        this.show = false
+      }
+      this.toDoList.splice(index, 1);
     },
   }
 };
