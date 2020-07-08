@@ -1,5 +1,5 @@
 <template>
-  <div class="todolist">
+  <div class="todolist container" :style="[itemCounter.length > 1 ? styleObject : {}]">
     <div class="todolist__main">
       <div class="container">
         <section class="title">
@@ -40,7 +40,12 @@ export default {
       message: "Lista de Tareas",
       task: "",
       toDoList: [],
-      show: false
+      show: false,
+      styleObject: {
+        padding:'50px 0',
+        alignItems:'flex-start',
+        height: '100%',
+      }
     };
   },
   methods: {
@@ -127,7 +132,7 @@ ul{
   -webkit-box-pack: justify;
   justify-content: space-between;
   margin: 0.5em 0;
-  padding: 0.5em 0.5em 0.5em 1em;
+  padding: 0.5em 1em;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   width: 450px
@@ -201,5 +206,22 @@ ul{
 }
 .card__taskdone .card__line {
   text-decoration: line-through;
+}
+@media (max-width: 767px) {
+  .todolist__main{
+    width: 90%;
+    padding: 50px 15px;
+  }
+  .todolist__search{
+    width: 100%;
+    flex-direction: column;
+  }
+  .todolist__search button,
+  .todolist__search input {
+    width: 100%;
+  }
+  .todolist__search button{
+    margin-top: 15px;
+  }
 }
 </style>
