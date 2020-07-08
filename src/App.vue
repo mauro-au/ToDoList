@@ -24,6 +24,7 @@
               </div>
             </li>
           </ul>
+          <button class="btn btn-primary btn-lg btn-block mt-5 card__delate" v-if="show" @click="allDelateToDo">Borrar todo</button>
         </section>
       </div>
     </div>
@@ -31,11 +32,13 @@
 </template>
 <script>
 export default {
+  name: 'App',
   data() {
     return {
       message: "Lista de Tareas",
       task: "",
       toDoList: [],
+      show: false
     };
   },
   methods: {
@@ -52,13 +55,30 @@ export default {
       }
       this.toDoList.splice(index, 1);
     },
-  }
-};
+    allDelateToDo() {
+      this.show = false
+      this.toDoList = [];
+    }
+  },
+}
 </script>
+
 <style land>
 
+@keyframes opacity{
+  0% {
+    opacity:0;
+    margin-top: -25px;
+  }
+  100% {
+    position: relative;
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
 body{
   background: #d6d6d6 !important;
+
 }
 h1{
   font-weight: 900 !important;
@@ -75,6 +95,10 @@ ul{
   align-items: center;
   align-content: center;
   height: 100vh;
+}
+.todolist__counter{
+  font-size: 1.3rem;
+  color: #bfbfbf
 }
 .todolist__main {
   color: #415c79;
