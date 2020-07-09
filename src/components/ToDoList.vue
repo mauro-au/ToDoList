@@ -166,7 +166,6 @@ ul{
   box-shadow: 0 2px 20px -4px rgba(0, 0, 0, 0.19) !important;
   margin-bottom: 1.2rem;
   border-radius: 10px !important;
-  position: absolute;
   border: none !important;
   animation-name: opacity;
   animation-duration: 1s;
