@@ -1,29 +1,29 @@
 {
-  "name": "vue3",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "todolist",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "serve": "webpack-dev-server --mode development"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
-    "babel-loader": "^8.1.0",
     "bootstrap": "^4.5.0",
-    "css-loader": "^3.6.0",
-    "html-webpack-plugin": "^4.3.0",
+    "core-js": "^3.6.5",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "save": "^2.4.0",
-    "vue": "^2.6.11",
-    "vue-loader": "^15.9.3",
-    "vue-style-loader": "^4.1.2",
-    "vue-template-compiler": "^2.6.11",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.4.6",
+    "@vue/cli-plugin-eslint": "~4.4.6",
+    "@vue/cli-service": "~4.4.6",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.4.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.2",
+    "vue-template-compiler": "^2.6.11"
   }
 }
