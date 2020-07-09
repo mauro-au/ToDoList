@@ -1,24 +1,89 @@
-# todolist
+# ToDoList 
 
-## Project setup
+Construcción de una lista de tareas desarrollado en Vue js, que crea, selecciona y elimina ítems de la lista creada, junto a un contador de tareas no marcadas
+
+## Tecnologías​ :hammer_and_wrench:
+
+- Html5
+- Css3
+- Bem
+- VueJs
+- Bootstrap
+
+**Visual Studio Code** ( Editor recomendado ) ✔️
+
+> https://code.visualstudio.com/
+
+
+
+## Vista Proyecto :tada:
+
+[ver proyecto](https://to-dolist-vuejs.netlify.app/) :computer:
+
+![todolist](https://user-images.githubusercontent.com/47857535/87039489-33c8d180-c1bd-11ea-96c5-9d3806d17657.png)
+
+## Requisitos ✔️
+
+Antes de arrancar este proyecto debes tener instalado lo siguiente
+
+**Node.js**
+
+> [https://nodejs.org/](https://nodejs.org/)
+
+**Vue.js** 
+
+> [https://vuejs.org/](https://vuejs.org/)
+
 ```
-npm install
+$ npm install -g vue
 ```
 
-### Compiles and hot-reloads for development
+**Vue CLI**
+
+> [https://cli.vuejs.org/](https://cli.vuejs.org/)
+
+```
+npm install -g @vue/cli @vue/cli-service-global
+```
+
+
+
+## Clonar proyecto
+
+```
+git clone https://github.com/mauriciodesign/ToDoList.git
+```
+
+
+
+## Instalación​ :open_file_folder:
+
+Una vez clonado el proyecto solo queda instalar las dependencias, ubicándose en la carpeta raíz, escribir el siguiente comando
+
+```
+$ npm install
+```
+
+Terminado el proceso se podrá ejecutar el proyecto localmente con el siguiente comando
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+
+
+## Despliegue :rocket:
+
+Con el siguiente comando se compila y minifica para producción
+
 ```
-npm run build
+$ npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+#### Autor :sunglasses:
+
+------
+
+Application developed by [**MauricioDesign**](https://github.com/mauriciodesign) 🤘​

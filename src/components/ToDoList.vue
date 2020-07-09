@@ -1,5 +1,5 @@
 <template>
-  <div class="todolist container" :style="[itemCounter.length > 1 ? styleObject : {}]">
+  <div class="todolist container" :style="[toDoList.length > 1 ? styleObject : {}]">
     <div class="todolist__main">
       <div class="container">
         <section class="title">
