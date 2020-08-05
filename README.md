@@ -30,20 +30,18 @@ Antes de arrancar este proyecto debes tener instalado lo siguiente
 
 > [https://nodejs.org/](https://nodejs.org/)
 
-**Vue.js** 
-
-> [https://vuejs.org/](https://vuejs.org/)
-
-```
-$ npm install -g vue
-```
-
 **Vue CLI**
 
 > [https://cli.vuejs.org/](https://cli.vuejs.org/)
 
 ```
-npm install -g @vue/cli @vue/cli-service-global
+$ npm install -g @vue/cli
+```
+
+#o
+
+```
+$ yarn global add @vue/cli
 ```
 
 
@@ -64,10 +62,24 @@ Una vez clonado el proyecto solo queda instalar las dependencias, ubicándose en
 $ npm install
 ```
 
+#o
+
+```
+$ yarn install
+```
+
+
+
 Terminado el proceso se podrá ejecutar el proyecto localmente con el siguiente comando
 
 ```
 npm run serve
+```
+
+#o
+
+```
+$ yarn start
 ```
 
 
@@ -78,6 +90,12 @@ Con el siguiente comando se compila y minifica para producción
 
 ```
 $ npm run build
+```
+
+#o
+
+```
+$ yarn build
 ```
 
 
